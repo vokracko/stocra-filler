@@ -1,0 +1,11 @@
+services:
+  filler:
+    image: filler
+    build: .
+    restart: unless-stopped
+    env_file: .env
+
+networks:
+  default:
+    name: stocra
+    external: true
